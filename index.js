@@ -15,18 +15,25 @@ const formatMessage = (message, attachments = []) => ({
 })
 
 module.exports = async (req, res) => {
-  const { text, user_name: username } = await parse(req)
+  const { text, token, user_name: username } = await parse(req)
 
-  if (!username) return send(res, 400, formatMessage('Bad request'))
+  // Handle bad requests.
+  if (token !== process.env.TOKEN || !username) {
+    return send(res, 400, formatMessage('Bad request'))
+  }
+
+  // Deny people on the blacklist.
   if (blacklist.includes(username)) {
     return send(res, 400, formatMessage('Nope. We won\'t let you! :smiling_imp:'))
   }
 
+  // Clear the queue.
   if (text === 'clear') {
     queue.clear()
     return send(res, 200, formatMessage(`Queue has been cleared.`))
   }
 
+  // Add the user to the queue.
   queue.add(username)
   const players = Array.from(queue).join(', ')
 
