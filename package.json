@@ -7,12 +7,12 @@
     "lint": "standard"
   },
   "dependencies": {
-    "dotenv": "^5.0.1",
+    "dotenv": "^6.0.0",
     "micro": "^9.3.2",
     "urlencoded-body-parser": "^2.0.1"
   },
   "devDependencies": {
-    "now": "^11.1.16",
+    "now": "^11.2.1",
     "standard": "^11.0.1"
   }
 }
