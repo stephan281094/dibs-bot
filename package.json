@@ -4,7 +4,7 @@
   "scripts": {
     "start": "micro -l tcp://0.0.0.0:${PORT-5000}",
     "deploy": "now --docker --public",
-    "lint": "standard"
+    "lint": "prettier --list-different *.js"
   },
   "dependencies": {
     "dotenv": "^6.0.0",
@@ -13,6 +13,6 @@
   },
   "devDependencies": {
     "now": "^11.2.1",
-    "standard": "^11.0.1"
+    "prettier": "^1.13.7"
   }
 }
