@@ -26,7 +26,7 @@ module.exports = async (req, res) => {
   if (blacklist.includes(username)) {
     return send(
       res,
-      400,
+      200,
       formatMessage("Nope. We won't let you! :smiling_imp:")
     )
   }
