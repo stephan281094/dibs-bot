@@ -8,6 +8,7 @@
   "dependencies": {
     "dotenv": "^6.0.0",
     "micro": "^9.3.2",
+    "redis": "^2.8.0",
     "urlencoded-body-parser": "^2.0.1"
   },
   "devDependencies": {
