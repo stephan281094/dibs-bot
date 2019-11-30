@@ -13,7 +13,6 @@
     "urlencoded-body-parser": "^3.0.0"
   },
   "devDependencies": {
-    "micro-dev": "^3.0.0",
     "now": "^16.6.0"
   }
 }
