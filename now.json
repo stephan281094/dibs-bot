@@ -1,5 +1,7 @@
 {
+  "name": "dibs-bot",
   "version": 2,
+  "alias": "ab-dibs-bot.now.sh",
   "env": {
     "FAUNADB_SECRET": "@dibs-bot-faunadb-secret",
     "SLACK_TOKEN": "@dibs-bot-slack-token"

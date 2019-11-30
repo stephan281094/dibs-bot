@@ -3,8 +3,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "bootstrap": "node bootstrap.js",
-    "start": "now dev",
-    "deploy": "now --public"
+    "start": "now dev"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
