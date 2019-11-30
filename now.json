@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "env": {
+    "FAUNADB_SECRET": "@dibs-bot-faunadb-secret",
+    "SLACK_TOKEN": "@dibs-bot-slack-token"
+  }
+}

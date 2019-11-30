@@ -1,18 +1,19 @@
 {
-  "main": "index.js",
+  "main": "api/index.js",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "micro -l tcp://0.0.0.0:${PORT-5000}",
-    "deploy": "now --docker --public"
+    "bootstrap": "node bootstrap.js",
+    "start": "now dev",
+    "deploy": "now --public"
   },
   "dependencies": {
-    "dotenv": "^6.0.0",
-    "micro": "^9.3.2",
-    "redis": "^2.8.0",
-    "urlencoded-body-parser": "^2.0.1"
+    "dotenv": "^8.2.0",
+    "faunadb": "^2.10.0",
+    "micro": "^9.3.4",
+    "urlencoded-body-parser": "^3.0.0"
   },
   "devDependencies": {
-    "now": "^11.2.1",
-    "prettier": "^1.13.7"
+    "micro-dev": "^3.0.0",
+    "now": "^16.6.0"
   }
 }
