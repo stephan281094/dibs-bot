@@ -63,6 +63,19 @@ module.exports = async (req, res) => {
     return send(res, 200, formatMessage(`Queue has been cleared.`));
   }
 
+  // Show the list of players in the queue.
+  if (text === "list") {
+    const { players } = queue.data;
+
+    return send(
+      res,
+      200,
+      formatMessage(
+        `Players in queue: ${players.length > 0 ? players.join(", ") : "none"}`
+      )
+    );
+  }
+
   // Check if the user is already in the queue.
   if (queue.data.players.includes(username)) {
     const { players } = queue.data;
